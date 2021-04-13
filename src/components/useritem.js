@@ -1,0 +1,20 @@
+import React from "react"
+
+function UserItem(props) {
+    
+    return(
+        <div className="row useritem">
+           <div><strong>Name : </strong>  {props.user.Firstname}  {props.user.Lastname}</div>
+           <div><strong>Email : </strong>   {props.user.Email}</div>
+           <div><strong>Country : </strong>   {props.user.Country}</div>
+           <div className="btn">
+               <button className="updatebtn">Update</button>
+               <button className="deletebtn">Delete</button>
+           </div>
+        </div>
+    )
+    
+    
+    
+    }
+    export default UserItem;
