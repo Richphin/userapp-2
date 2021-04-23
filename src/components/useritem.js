@@ -9,7 +9,7 @@ function UserItem(props) {
            <div><strong>Country : </strong>   {props.user.Country}</div>
            <div className="btn">
                <button className="updatebtn">Update</button>
-               <button className="deletebtn">Delete</button>
+               <button className="deletebtn" onClick={() => props.delete(props.user.id)}>Delete</button>
            </div>
         </div>
     )

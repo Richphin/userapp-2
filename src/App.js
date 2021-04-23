@@ -11,6 +11,10 @@ function App() {
       ...users,user
     ]);
   }
+  function deleteuser(id) {
+    let newUsers = users.filter((user) => user.id !==id)
+    userstate(newUsers)
+  }
 
 
  return(
@@ -19,7 +23,7 @@ function App() {
     <Userform adduser={adduser}/>
   </div>
   <div className="col-md-6">
-    <Userlist allUsers={users}/>
+    <Userlist allUsers={users} delete={deleteuser}/>
   </div>
 </div>
  )
